@@ -953,6 +953,10 @@ body {
 .privacy-body {
   background: linear-gradient(145deg, #d4fff0, var(--cream));
 }
+.window-privacy .window-body h2 {
+  letter-spacing: -0.015em;
+  line-height: 1;
+}
 .lab-label {
   color: var(--purple);
   font: 7px "Press Start 2P", monospace !important;
