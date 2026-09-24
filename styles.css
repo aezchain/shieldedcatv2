@@ -34,8 +34,11 @@ body {
   position: absolute;
   inset: 0;
   opacity: 0.18;
-  background-image:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.7) 1px, transparent 1px),
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.7) 1px,
+      transparent 1px
+    ),
     linear-gradient(rgba(255, 255, 255, 0.7) 1px, transparent 1px);
   background-size: 18px 18px;
 }
@@ -56,9 +59,7 @@ body {
   justify-content: space-between;
   padding: 0 18px;
   background: var(--cream);
-  font:
-    10px "Press Start 2P",
-    monospace;
+  font: 10px "Press Start 2P", monospace;
 }
 .system-bar {
   height: 34px;
@@ -98,9 +99,7 @@ body {
   border: 0;
   background: transparent;
   color: var(--ink);
-  font:
-    8px/1.4 "Press Start 2P",
-    monospace;
+  font: 8px/1.4 "Press Start 2P", monospace;
   cursor: pointer;
   text-shadow: 1px 1px #fff;
 }
@@ -131,15 +130,11 @@ body {
 }
 .pet-title p {
   margin: 0 0 12px;
-  font:
-    9px "Press Start 2P",
-    monospace;
+  font: 9px "Press Start 2P", monospace;
 }
 .pet-title h1 {
   margin: 0;
-  font:
-    clamp(50px, 7vw, 102px) / 0.8 "Press Start 2P",
-    monospace;
+  font: clamp(50px, 7vw, 102px) / 0.8 "Press Start 2P", monospace;
   letter-spacing: -0.13em;
   text-shadow: 5px 5px 0 var(--cream);
 }
@@ -248,9 +243,7 @@ body {
   border-radius: 12px;
   background: var(--lime);
   box-shadow: 4px 5px 0 var(--ink);
-  font:
-    9px/1.45 "Press Start 2P",
-    monospace;
+  font: 9px/1.45 "Press Start 2P", monospace;
   transform: rotate(4deg);
 }
 .pet-stats {
@@ -268,9 +261,7 @@ body {
 }
 .pet-stats p {
   margin: 0 0 10px;
-  font:
-    8px "Press Start 2P",
-    monospace;
+  font: 8px "Press Start 2P", monospace;
 }
 .pet-stats p:last-child {
   margin: 0;
@@ -303,9 +294,7 @@ body {
   left: 50%;
   width: 90%;
   transform: translateX(-50%);
-  font:
-    7px/1.6 "Press Start 2P",
-    monospace;
+  font: 7px/1.6 "Press Start 2P", monospace;
 }
 .window {
   position: fixed;
@@ -346,9 +335,7 @@ body {
   background: var(--purple);
   border-bottom: var(--line);
   color: #fff;
-  font:
-    8px "Press Start 2P",
-    monospace;
+  font: 8px "Press Start 2P", monospace;
   cursor: grab;
 }
 .window-close {
@@ -357,9 +344,7 @@ body {
   border: 2px solid var(--ink);
   background: var(--orange);
   color: var(--ink);
-  font:
-    20px/1 Fredoka,
-    sans-serif;
+  font: 20px/1 Fredoka, sans-serif;
   cursor: pointer;
 }
 .window-body {
@@ -368,9 +353,7 @@ body {
 }
 .window-body h2 {
   margin: 0 0 14px;
-  font:
-    21px/0.9 "Press Start 2P",
-    monospace;
+  font: 21px/0.9 "Press Start 2P", monospace;
   letter-spacing: -0.1em;
 }
 .window-body p {
@@ -395,18 +378,14 @@ body {
   border: var(--line);
   background: var(--lime);
   box-shadow: 3px 4px 0 var(--ink);
-  font:
-    8px/1.4 "Press Start 2P",
-    monospace;
+  font: 8px/1.4 "Press Start 2P", monospace;
   cursor: pointer;
 }
 .launch-button {
   display: block;
   margin-top: 15px;
   color: var(--ink);
-  font:
-    8px "Press Start 2P",
-    monospace;
+  font: 8px "Press Start 2P", monospace;
   text-decoration: none;
   border-bottom: 2px solid var(--orange);
   padding-bottom: 4px;
@@ -424,10 +403,7 @@ body {
   position: relative;
 }
 .route-game i:before {
-  content: "✦";
-  position: absolute;
-  top: -9px;
-  color: var(--orange);
+  content: none;
 }
 .route-stop {
   width: 72px;
@@ -436,9 +412,7 @@ body {
   border-radius: 50%;
   background: var(--cyan);
   box-shadow: 3px 4px 0 var(--ink);
-  font:
-    7px "Press Start 2P",
-    monospace;
+  font: 7px "Press Start 2P", monospace;
   cursor: pointer;
 }
 .route-stop:nth-of-type(2) {
@@ -460,14 +434,10 @@ body {
   min-height: 35px;
   padding: 9px;
   border: 2px dashed var(--ink);
-  font:
-    8px/1.5 "Press Start 2P",
-    monospace !important;
+  font: 8px/1.5 "Press Start 2P", monospace !important;
 }
 .window small {
-  font:
-    7px/1.5 "Press Start 2P",
-    monospace;
+  font: 7px/1.5 "Press Start 2P", monospace;
 }
 .diary-body {
   min-height: 330px;
@@ -475,9 +445,7 @@ body {
 }
 .diary-date {
   color: var(--purple);
-  font:
-    8px "Press Start 2P",
-    monospace !important;
+  font: 8px "Press Start 2P", monospace !important;
 }
 .diary-sticker {
   position: absolute;
@@ -487,18 +455,14 @@ body {
   border: var(--line);
   background: var(--orange);
   box-shadow: 3px 4px var(--ink);
-  font:
-    8px/1.4 "Press Start 2P",
-    monospace;
+  font: 8px/1.4 "Press Start 2P", monospace;
   transform: rotate(8deg);
 }
 .diary-body a {
   display: inline-block;
   margin-top: 7px;
   color: var(--ink);
-  font:
-    7px/1.5 "Press Start 2P",
-    monospace;
+  font: 7px/1.5 "Press Start 2P", monospace;
 }
 .facts-body {
   background: #c8f7ff;
@@ -513,9 +477,7 @@ body {
   gap: 10px;
   padding: 9px 0;
   border-bottom: 2px solid var(--ink);
-  font:
-    7px "Press Start 2P",
-    monospace;
+  font: 7px "Press Start 2P", monospace;
 }
 .facts-body dt {
   color: var(--purple);
@@ -528,9 +490,7 @@ body {
   display: block;
   padding: 9px;
   border: 2px dashed var(--ink);
-  font:
-    7px/1.6 "DM Mono",
-    monospace;
+  font: 7px/1.6 "DM Mono", monospace;
   word-break: break-all;
 }
 .sticker-stack {
@@ -549,9 +509,7 @@ body {
   border: var(--line);
   background: var(--lime);
   box-shadow: 3px 4px 0 var(--ink);
-  font:
-    7px "Press Start 2P",
-    monospace;
+  font: 7px "Press Start 2P", monospace;
   transform: rotate(3deg);
 }
 .sticker-stack p:nth-child(2) {
@@ -780,9 +738,7 @@ body {
 .radio-on,
 .mail-count {
   color: var(--lime);
-  font:
-    8px "Press Start 2P",
-    monospace !important;
+  font: 8px "Press Start 2P", monospace !important;
 }
 .equalizer {
   display: flex;
@@ -830,9 +786,7 @@ body {
   border: 2px solid var(--ink);
   background: var(--coral);
   color: var(--ink);
-  font:
-    6px/1.4 "Press Start 2P",
-    monospace;
+  font: 6px/1.4 "Press Start 2P", monospace;
   cursor: pointer;
 }
 .station-buttons button:hover {
@@ -864,9 +818,7 @@ body {
   border: var(--line);
   background: var(--lime);
   box-shadow: 4px 5px 0 var(--ink);
-  font:
-    7px "Press Start 2P",
-    monospace;
+  font: 7px "Press Start 2P", monospace;
   pointer-events: none;
   transition: 0.25s;
 }
@@ -935,9 +887,7 @@ body {
   right: -1%;
   top: 19%;
   color: var(--cream);
-  font:
-    54px "Press Start 2P",
-    monospace;
+  font: 54px "Press Start 2P", monospace;
   text-shadow: 3px 4px var(--ink);
   transform: rotate(-26deg);
   animation: satellite-drift 7s ease-in-out infinite alternate;
@@ -945,9 +895,7 @@ body {
 .sky-star {
   position: absolute;
   color: var(--lime);
-  font:
-    27px "Press Start 2P",
-    monospace;
+  font: 27px "Press Start 2P", monospace;
   text-shadow: 2px 2px var(--ink);
 }
 .star-one {
@@ -964,36 +912,33 @@ body {
 .forecast-widget {
   position: absolute;
   z-index: 5;
-  right: -17%;
-  top: 30%;
-  width: 156px;
-  padding: 10px;
+  right: -8%;
+  top: 29%;
+  width: 176px;
+  padding: 12px;
   border: var(--line);
   background: var(--cream);
   box-shadow: 4px 5px 0 var(--ink);
   text-align: left;
-  transform: rotate(4deg);
+  transform: none;
 }
 .forecast-widget p {
-  margin: 0 0 9px;
+  margin: 0 0 8px;
   color: var(--purple);
-  font:
-    6px "Press Start 2P",
-    monospace;
+  font: 700 9px/1.2 "DM Mono", monospace;
+  letter-spacing: 0.06em;
 }
 .forecast-widget b {
   display: block;
   color: var(--orange);
-  font:
-    20px/0.9 "Press Start 2P",
-    monospace;
+  font: 700 24px/0.95 Fredoka, sans-serif;
+  letter-spacing: -0.04em;
 }
 .forecast-widget span {
   display: block;
   margin-top: 10px;
-  font:
-    6px/1.6 "Press Start 2P",
-    monospace;
+  font: 700 8px/1.6 "DM Mono", monospace;
+  letter-spacing: 0.02em;
 }
 .window-privacy {
   right: 365px;
@@ -1006,9 +951,7 @@ body {
 }
 .lab-label {
   color: var(--purple);
-  font:
-    7px "Press Start 2P",
-    monospace !important;
+  font: 7px "Press Start 2P", monospace !important;
 }
 .privacy-diagram {
   margin: 16px 0;
@@ -1021,9 +964,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 0 0 12px;
-  font:
-    8px "Press Start 2P",
-    monospace !important;
+  font: 8px "Press Start 2P", monospace !important;
 }
 .privacy-diagram span {
   color: var(--orange);
@@ -1038,9 +979,7 @@ body {
   font-style: normal;
 }
 .privacy-diagram small {
-  font:
-    7px/1.6 "Press Start 2P",
-    monospace;
+  font: 7px/1.6 "Press Start 2P", monospace;
 }
 .lab-note {
   padding: 9px;
@@ -1116,9 +1055,7 @@ body {
   border: var(--line);
   background: var(--lime);
   box-shadow: 3px 4px 0 var(--ink);
-  font:
-    8px "Press Start 2P",
-    monospace;
+  font: 8px "Press Start 2P", monospace;
   text-decoration: none;
   transform: rotate(-2deg);
   position: relative;
@@ -1141,15 +1078,48 @@ body {
   white-space: nowrap;
 }
 .route-order {
-  margin: -8px 0 15px;
-  color: var(--purple);
-  text-align: center;
-  font:
-    6px/1.7 "Press Start 2P",
-    monospace !important;
+  display: none;
 }
 .route-game {
   margin-bottom: 8px;
+}
+.window-route .window-body h2 {
+  font-family: Fredoka, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+}
+.window-route .route-stop {
+  font-family: Fredoka, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 0.9;
+}
+.window-route .route-stop b {
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+}
+.window-route .route-stop span {
+  margin-top: 7px;
+  font-size: 12px;
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+}
+.window-route .route-message,
+.window-route small {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.window-body h2 {
+  font-family: Fredoka, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.07em;
 }
 .radio-body h2 {
   font-size: 16px;
@@ -1178,5 +1148,20 @@ body {
   .meet-button {
     margin-top: 12px;
     font-size: 6px;
+  }
+  .forecast-widget {
+    transform: scale(0.76);
+  }
+  .window-body h2 {
+    font-size: 25px;
+  }
+  .window-route .window-body h2 {
+    font-size: 28px;
+  }
+  .window-route .route-stop {
+    font-size: 11px;
+  }
+  .window-route .route-stop span {
+    font-size: 10px;
   }
 }
