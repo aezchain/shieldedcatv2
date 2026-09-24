@@ -9,7 +9,7 @@ const copyButton = document.getElementById("copyContract");
 const contractAddress = document.getElementById("contractAddress").textContent;
 const toast = document.getElementById("toast");
 let treatCount = 0;
-let stealth = 87;
+let stealth = 0;
 let radioContext;
 let radioTimer;
 let radioStep = 0;
@@ -107,7 +107,7 @@ catButton.addEventListener("click", () => {
 
 feedButton.addEventListener("click", () => {
   treatCount += 1;
-  stealth = Math.min(100, stealth + 4);
+  stealth = Math.min(100, stealth + 20);
   stealthBar.style.width = stealth + "%";
   stealthPercent.textContent = stealth + "%";
   mood.textContent = treatCount === 1 ? "snack mode" : "treat x" + treatCount;
