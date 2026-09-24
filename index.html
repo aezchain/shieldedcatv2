@@ -46,6 +46,9 @@
         <button class="desktop-icon" data-open="diary">
           <span>🔒</span>SECRET<br />DIARY
         </button>
+        <button class="desktop-icon" data-open="privacy">
+          <span>🧪</span>ZK<br />LAB
+        </button>
         <button class="desktop-icon" data-open="facts">
           <span>💾</span>CAT<br />FACTS
         </button>
@@ -61,7 +64,9 @@
         <div class="sun">✦</div>
         <div class="cloud cloud-a">☁</div>
         <div class="cloud cloud-b">☁</div>
-        <div class="ground"><i></i><i></i><i></i><i></i></div>
+        <div class="sky-satellite">◒</div>
+        <div class="sky-star star-one">✦</div>
+        <div class="sky-star star-two">✧</div>
         <div class="pet-title">
           <p>YOUR VIRTUAL PRIVACY CAT</p>
           <h1>SHIELDED<br /><em>CAT</em></h1>
@@ -85,6 +90,7 @@
           />
           <span id="petSpeech" class="pet-speech">CLICK ME<br />I'M SHY</span>
         </button>
+        <div class="cat-shadow" aria-hidden="true"></div>
         <div class="pet-stats">
           <p>
             <span>STEALTH</span><i><b id="stealthBar"></b></i
@@ -92,9 +98,11 @@
           </p>
           <p><span>MOOD</span><strong id="mood">mysterious</strong></p>
         </div>
-        <p class="boot-note">
-          DOUBLE CLICK THE APPS. THE CAT DOES NOT SHARE WIFI PASSWORDS.
-        </p>
+        <aside class="forecast-widget">
+          <p>STEALTH FORECAST</p>
+          <b>99%<br />QUIET</b>
+          <span>wind: relay route<br />snack chance: high</span>
+        </aside>
       </main>
 
       <article
@@ -209,6 +217,42 @@
             <p>i hid behind my shield until they left.</p>
             <p>then i had three snacks. huge day. 🐾</p>
           </div>
+        </div>
+      </article>
+
+      <article
+        class="window window-privacy"
+        id="privacy"
+        aria-label="ZK Lab window"
+        hidden
+      >
+        <header class="window-bar">
+          <span>🧪 zk_lab.app</span
+          ><button class="window-close" data-close="privacy" aria-label="Close">
+            ×
+          </button>
+        </header>
+        <div class="window-body privacy-body">
+          <p class="lab-label">EXPERIMENT 001</p>
+          <h2>WHY BE<br />PRIVATE?</h2>
+          <div class="privacy-diagram">
+            <p>
+              <span>YOU</span><i>→</i><b>RELAY</b><i>→</i><strong>CAT</strong>
+            </p>
+            <small
+              >Protected trade routes can display a relay as sender rather than
+              the buyer wallet.</small
+            >
+          </div>
+          <p>
+            Public trading can reveal your timing, amounts and wallet patterns.
+            Privacy adds room to move without handing that signal to every
+            on-chain observer.
+          </p>
+          <p class="lab-note">
+            Privacy is a tool, not a promise of perfect anonymity. Check the
+            live route before trading.
+          </p>
         </div>
       </article>
 

@@ -910,6 +910,198 @@ body {
   }
 }
 
+/* The pet lives in the sky now, not an empty lawn. */
+.ground,
+.boot-note {
+  display: none;
+}
+.pet-zone {
+  min-height: calc(100vh - 42px);
+}
+.cat-shadow {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 13%;
+  width: 230px;
+  height: 28px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(26, 23, 67, 0.23);
+  filter: blur(3px);
+}
+.sky-satellite {
+  position: absolute;
+  right: -1%;
+  top: 19%;
+  color: var(--cream);
+  font:
+    54px "Press Start 2P",
+    monospace;
+  text-shadow: 3px 4px var(--ink);
+  transform: rotate(-26deg);
+  animation: satellite-drift 7s ease-in-out infinite alternate;
+}
+.sky-star {
+  position: absolute;
+  color: var(--lime);
+  font:
+    27px "Press Start 2P",
+    monospace;
+  text-shadow: 2px 2px var(--ink);
+}
+.star-one {
+  top: 34%;
+  right: 14%;
+  animation: twinkle 1.3s steps(2) infinite;
+}
+.star-two {
+  top: 17%;
+  left: 12%;
+  color: var(--orange);
+  animation: twinkle 1.7s steps(2) infinite reverse;
+}
+.forecast-widget {
+  position: absolute;
+  z-index: 5;
+  right: -17%;
+  top: 30%;
+  width: 156px;
+  padding: 10px;
+  border: var(--line);
+  background: var(--cream);
+  box-shadow: 4px 5px 0 var(--ink);
+  text-align: left;
+  transform: rotate(4deg);
+}
+.forecast-widget p {
+  margin: 0 0 9px;
+  color: var(--purple);
+  font:
+    6px "Press Start 2P",
+    monospace;
+}
+.forecast-widget b {
+  display: block;
+  color: var(--orange);
+  font:
+    20px/0.9 "Press Start 2P",
+    monospace;
+}
+.forecast-widget span {
+  display: block;
+  margin-top: 10px;
+  font:
+    6px/1.6 "Press Start 2P",
+    monospace;
+}
+.window-privacy {
+  right: 365px;
+  bottom: 64px;
+  width: 302px;
+  transform: rotate(-2deg);
+}
+.privacy-body {
+  background: linear-gradient(145deg, #d4fff0, var(--cream));
+}
+.lab-label {
+  color: var(--purple);
+  font:
+    7px "Press Start 2P",
+    monospace !important;
+}
+.privacy-diagram {
+  margin: 16px 0;
+  padding: 12px;
+  border: 2px dashed var(--ink);
+  background: #fff;
+}
+.privacy-diagram p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 12px;
+  font:
+    8px "Press Start 2P",
+    monospace !important;
+}
+.privacy-diagram span {
+  color: var(--orange);
+}
+.privacy-diagram b {
+  color: var(--purple);
+}
+.privacy-diagram strong {
+  color: #36a866;
+}
+.privacy-diagram i {
+  font-style: normal;
+}
+.privacy-diagram small {
+  font:
+    7px/1.6 "Press Start 2P",
+    monospace;
+}
+.lab-note {
+  padding: 9px;
+  border-left: 4px solid var(--orange);
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+}
+@keyframes satellite-drift {
+  to {
+    transform: translate(-14px, 10px) rotate(-14deg);
+  }
+}
+@keyframes twinkle {
+  50% {
+    transform: scale(0.55) rotate(25deg);
+    opacity: 0.5;
+  }
+}
+@media (max-width: 950px) {
+  .forecast-widget {
+    right: 0;
+  }
+  .window-privacy {
+    right: 40px;
+    bottom: 70px;
+  }
+}
+@media (max-width: 640px) {
+  .cat-shadow {
+    bottom: 14%;
+    width: 170px;
+    height: 20px;
+  }
+  .forecast-widget {
+    right: 5px;
+    top: 22%;
+    transform: scale(0.76) rotate(4deg);
+    transform-origin: right top;
+  }
+  .sky-satellite {
+    right: 2%;
+    top: 24%;
+    font-size: 36px;
+  }
+  .star-one {
+    right: 7%;
+    top: 38%;
+  }
+  .star-two {
+    left: 8%;
+    top: 22%;
+  }
+  .window-privacy {
+    top: 16%;
+    bottom: auto;
+  }
+  .pet-button {
+    bottom: 17%;
+  }
+}
+
 /* Second-pass readability and less oversized pet energy. */
 .pet-button {
   width: 69%;
