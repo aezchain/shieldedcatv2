@@ -10,6 +10,9 @@ const contractAddress = document.getElementById("contractAddress").textContent;
 const toast = document.getElementById("toast");
 let treatCount = 0;
 let stealth = 87;
+let radioContext;
+let radioTimer;
+let radioStep = 0;
 
 function showToast(message) {
   toast.textContent = message;
@@ -51,6 +54,39 @@ function playMeow() {
   window.setTimeout(() => context.close(), 550);
 }
 
+function stopRadio() {
+  window.clearInterval(radioTimer);
+  radioTimer = undefined;
+}
+
+function playRadioNote() {
+  if (!radioContext) return;
+  const notes = [262, 330, 392, 523, 392, 330, 294, 392];
+  const oscillator = radioContext.createOscillator();
+  const gain = radioContext.createGain();
+  const now = radioContext.currentTime;
+  oscillator.type = "square";
+  oscillator.frequency.setValueAtTime(notes[radioStep % notes.length], now);
+  gain.gain.setValueAtTime(0.0001, now);
+  gain.gain.exponentialRampToValueAtTime(0.045, now + 0.015);
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.16);
+  oscillator.connect(gain);
+  gain.connect(radioContext.destination);
+  oscillator.start(now);
+  oscillator.stop(now + 0.17);
+  radioStep += 1;
+}
+
+function startRadio() {
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext) return;
+  if (!radioContext) radioContext = new AudioContext();
+  if (radioContext.state === "suspended") radioContext.resume();
+  stopRadio();
+  playRadioNote();
+  radioTimer = window.setInterval(playRadioNote, 215);
+}
+
 const catLines = [
   "MROW!",
   "NO SNITCHES.",
@@ -74,7 +110,7 @@ feedButton.addEventListener("click", () => {
   stealth = Math.min(100, stealth + 4);
   stealthBar.style.width = stealth + "%";
   stealthPercent.textContent = stealth + "%";
-  mood.textContent = treatCount === 1 ? "snack secured" : "extremely spoiled";
+  mood.textContent = treatCount === 1 ? "snack mode" : "treat x" + treatCount;
   feedButton.textContent = "ANOTHER TREAT? x" + treatCount;
   petSpeech.innerHTML =
     treatCount % 2 ? "BEST DAY<br />EVER." : "MORE FISH<br />PLEASE.";
@@ -98,12 +134,14 @@ document.querySelectorAll("[data-open]").forEach((icon) => {
     const app = document.getElementById(icon.dataset.open);
     app.hidden = false;
     app.style.zIndex = "18";
+    if (icon.dataset.open === "radio") startRadio();
     showToast(icon.dataset.open.toUpperCase() + " OPENED");
   });
 });
 document.querySelectorAll("[data-close]").forEach((close) => {
   close.addEventListener("click", () => {
     document.getElementById(close.dataset.close).hidden = true;
+    if (close.dataset.close === "radio") stopRadio();
   });
 });
 document.querySelectorAll("[data-route]").forEach((stop) => {
@@ -114,8 +152,8 @@ document.querySelectorAll("[data-route]").forEach((stop) => {
 
 document.querySelectorAll("[data-station]").forEach((station) => {
   station.addEventListener("click", () => {
-    document.getElementById("radioTitle").innerHTML =
-      station.dataset.station.replace(" ", "<br />");
+    document.getElementById("radioTitle").textContent = station.dataset.station;
+    startRadio();
     showToast("TUNED TO " + station.dataset.station);
   });
 });
