@@ -49,6 +49,12 @@
         <button class="desktop-icon" data-open="facts">
           <span>💾</span>CAT<br />FACTS
         </button>
+        <button class="desktop-icon" data-open="radio">
+          <span>📻</span>LASER<br />RADIO
+        </button>
+        <button class="desktop-icon" data-open="mail">
+          <span>💌</span>PAW<br />MAIL
+        </button>
       </aside>
 
       <main class="pet-zone">
@@ -187,6 +193,62 @@
             rel="noreferrer"
             >WHY STARKNET HAS ZK LORE ↗</a
           >
+          <div class="cat-handwriting">
+            <p>dear diary, today i saw a wallet watcher.</p>
+            <p>i hid behind my shield until they left.</p>
+            <p>then i had three snacks. huge day. 🐾</p>
+          </div>
+        </div>
+      </article>
+
+      <article
+        class="window window-radio"
+        id="radio"
+        aria-label="Laser Radio window"
+        hidden
+      >
+        <header class="window-bar">
+          <span>📻 laser_radio.fm</span
+          ><button class="window-close" data-close="radio" aria-label="Close">
+            ×
+          </button>
+        </header>
+        <div class="window-body radio-body">
+          <p class="radio-on">● NOW PLAYING</p>
+          <h2 id="radioTitle">LASER<br />LOFI VOL. 9</h2>
+          <div class="equalizer">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="station-buttons">
+            <button data-station="LASER LOFI VOL. 9">LASER FM</button>
+            <button data-station="ALLEY CAT ANTHEMS">ALLEY FM</button>
+            <button data-station="NO SNITCHES PODCAST">PURRCAST</button>
+          </div>
+          <small>0 ads. 100% tiny beeps.</small>
+        </div>
+      </article>
+
+      <article
+        class="window window-mail"
+        id="mail"
+        aria-label="Paw Mail window"
+        hidden
+      >
+        <header class="window-bar">
+          <span>💌 paw_mail.inbox</span
+          ><button class="window-close" data-close="mail" aria-label="Close">
+            ×
+          </button>
+        </header>
+        <div class="window-body mail-body">
+          <p class="mail-count">INBOX (1)</p>
+          <h2>FROM: MOM<br />SUBJECT: WHERE ARE YOU?</h2>
+          <p>
+            i am in the alley.<br />i am safe.<br />please stop tagging my
+            wallet.
+          </p>
+          <p class="signed">love,<br />shielded cat 🐾</p>
+          <button id="replyButton" type="button">REPLY: MEOW</button>
         </div>
       </article>
 
@@ -240,6 +302,7 @@
         <span>🛡️ shieldedcat.com</span
         ><span>NOT FINANCIAL ADVICE. JUST A CAT WITH A SHIELD.</span>
       </footer>
+      <p class="toast" id="toast" aria-live="polite"></p>
     </div>
     <script src="script.js?v=pet-local-1"></script>
   </body>
