@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5d0ff" />
+    <meta name="description" content="Shielded Cat virtual pet desktop." />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/shielded-cat-mascot-transparent.png?v=3"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="assets/shielded-cat-mascot-transparent.png?v=3"
+    />
+    <title>Shielded Cat Web Pet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=pet-local-1" />
+  </head>
+  <body>
+    <div class="pixel-sky" aria-hidden="true"></div>
+    <div class="desktop">
+      <header class="system-bar">
+        <div>
+          <span class="apple">✦</span> SHIELDED CAT OS <small>v1.00 MEOW</small>
+        </div>
+        <p id="clock">12:00 PM</p>
+        <a href="https://x.com/shielded_cat" target="_blank" rel="noreferrer"
+          >𝕏 @SHIELDED_CAT</a
+        >
+      </header>
+
+      <aside class="app-dock" aria-label="Shielded Cat apps">
+        <button class="desktop-icon" data-open="feed">
+          <span>🥫</span>FEED<br />CAT
+        </button>
+        <button class="desktop-icon" data-open="route">
+          <span>🗺️</span>SNEAK<br />MAP
+        </button>
+        <button class="desktop-icon" data-open="diary">
+          <span>🔒</span>SECRET<br />DIARY
+        </button>
+        <button class="desktop-icon" data-open="facts">
+          <span>💾</span>CAT<br />FACTS
+        </button>
+      </aside>
+
+      <main class="pet-zone">
+        <div class="sun">✦</div>
+        <div class="cloud cloud-a">☁</div>
+        <div class="cloud cloud-b">☁</div>
+        <div class="ground"><i></i><i></i><i></i><i></i></div>
+        <div class="pet-title">
+          <p>YOUR VIRTUAL PRIVACY CAT</p>
+          <h1>SHIELDED<br /><em>CAT</em></h1>
+        </div>
+        <button
+          class="pet-button"
+          id="catButton"
+          type="button"
+          aria-label="Play with Shielded Cat"
+        >
+          <img
+            src="assets/shielded-cat-mascot-transparent.png"
+            alt="Shielded Cat holding a shield and red laser"
+          />
+          <span id="petSpeech" class="pet-speech">CLICK ME<br />I'M SHY</span>
+        </button>
+        <div class="pet-stats">
+          <p>
+            <span>STEALTH</span><i><b id="stealthBar"></b></i
+            ><em id="stealthPercent">87%</em>
+          </p>
+          <p><span>MOOD</span><strong id="mood">mysterious</strong></p>
+        </div>
+        <p class="boot-note">
+          DOUBLE CLICK THE APPS. THE CAT DOES NOT SHARE WIFI PASSWORDS.
+        </p>
+      </main>
+
+      <article
+        class="window window-feed is-open"
+        id="feed"
+        aria-label="Feed Cat window"
+      >
+        <header class="window-bar">
+          <span>🥫 feed_cat.exe</span
+          ><button class="window-close" data-close="feed" aria-label="Close">
+            ×
+          </button>
+        </header>
+        <div class="window-body feed-body">
+          <span class="pixel-cat-food">🐟</span>
+          <h2>THE CAT IS<br />HUNGRY.</h2>
+          <p>
+            It only eats ZEC-paired treats and it absolutely refuses to explain
+            why.
+          </p>
+          <button class="chunky-button" id="feedButton" type="button">
+            GIVE TREAT +1 STEALTH
+          </button>
+          <a
+            class="launch-button"
+            href="https://starklaunchy.fun/token/0xd7ae4a00b27ec15c40b399293e198b26ad0cf60600c3be197dfeddc777c4ea?side=buy"
+            target="_blank"
+            rel="noreferrer"
+            >OPEN LAUNCHY ↗</a
+          >
+        </div>
+      </article>
+
+      <article
+        class="window window-route"
+        id="route"
+        aria-label="Sneak Map window"
+        hidden
+      >
+        <header class="window-bar">
+          <span>🗺️ sneak_map.app</span
+          ><button class="window-close" data-close="route" aria-label="Close">
+            ×
+          </button>
+        </header>
+        <div class="window-body">
+          <h2>THE TINY<br />GETAWAY PLAN</h2>
+          <div class="route-game">
+            <button
+              class="route-stop"
+              data-route="ZEC snack selected. Good choice."
+            >
+              <b>1</b><span>GET<br />ZEC</span>
+            </button>
+            <i></i>
+            <button class="route-stop" data-route="Relay is doing the zoomies.">
+              <b>2</b><span>RELAY<br />RUNS</span>
+            </button>
+            <i></i>
+            <button
+              class="route-stop"
+              data-route="Cat lands safely. Mission: tiny success."
+            >
+              <b>3</b><span>CAT<br />HOME</span>
+            </button>
+          </div>
+          <p class="route-message" id="routeMessage">
+            PRESS A PAW PRINT TO START.
+          </p>
+          <small
+            >Protected route behavior depends on the live interface and wallet
+            setup.</small
+          >
+        </div>
+      </article>
+
+      <article
+        class="window window-diary"
+        id="diary"
+        aria-label="Secret Diary window"
+        hidden
+      >
+        <header class="window-bar">
+          <span>🔒 secret_diary.txt</span
+          ><button class="window-close" data-close="diary" aria-label="Close">
+            ×
+          </button>
+        </header>
+        <div class="window-body diary-body">
+          <p class="diary-date">DEAR DIARY,</p>
+          <h2>EVERYBODY<br />IS NOSY.</h2>
+          <p>
+            Public trades can expose entries, exits and patterns. That turns
+            your wallet activity into someone else’s hobby.
+          </p>
+          <p>
+            Privacy is room to move. It is not a promise of perfect anonymity.
+          </p>
+          <div class="diary-sticker">NOSEY<br />DETECTED<br />👀</div>
+          <a
+            href="https://starkware.co/blog/introducing-the-starknet-foundation/"
+            target="_blank"
+            rel="noreferrer"
+            >WHY STARKNET HAS ZK LORE ↗</a
+          >
+        </div>
+      </article>
+
+      <article
+        class="window window-facts"
+        id="facts"
+        aria-label="Cat Facts window"
+        hidden
+      >
+        <header class="window-bar">
+          <span>💾 cat_facts.dat</span
+          ><button class="window-close" data-close="facts" aria-label="Close">
+            ×
+          </button>
+        </header>
+        <div class="window-body facts-body">
+          <h2>100% REAL<br />CAT FACTS</h2>
+          <dl>
+            <div>
+              <dt>NETWORK</dt>
+              <dd>STARKNET ●</dd>
+            </div>
+            <div>
+              <dt>PAIR</dt>
+              <dd>SHIELDEDCAT / ZEC</dd>
+            </div>
+            <div>
+              <dt>SUPPLY</dt>
+              <dd>1,000,000,000</dd>
+            </div>
+            <div>
+              <dt>VENUE</dt>
+              <dd>LAUNCHY × EKUBO</dd>
+            </div>
+          </dl>
+          <code id="contractAddress"
+            >0x00d7aE4A00B27Ec15c40B399293e198b26ad0cf60600c3be197dfeddc777c4ea</code
+          >
+          <button class="copy-button" id="copyContract" type="button">
+            COPY CONTRACT ⧉
+          </button>
+        </div>
+      </article>
+
+      <aside class="sticker-stack" aria-label="Market snapshot">
+        <p><span>MARKET CAP</span><b>$49.1K</b></p>
+        <p><span>24H VOLUME</span><b>$66.3K</b></p>
+        <p><span>HOLDERS</span><b>164</b></p>
+      </aside>
+      <footer class="taskbar">
+        <span>🛡️ shieldedcat.com</span
+        ><span>NOT FINANCIAL ADVICE. JUST A CAT WITH A SHIELD.</span>
+      </footer>
+    </div>
+    <script src="script.js?v=pet-local-1"></script>
+  </body>
+</html>
