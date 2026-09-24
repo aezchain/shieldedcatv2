@@ -8,11 +8,14 @@ const feedButton = document.getElementById("feedButton");
 const copyButton = document.getElementById("copyContract");
 const contractAddress = document.getElementById("contractAddress").textContent;
 const toast = document.getElementById("toast");
+const feedWindow = document.getElementById("feed");
 let treatCount = 0;
 let stealth = 0;
 let radioContext;
 let radioTimer;
 let radioStep = 0;
+
+if (window.innerWidth > 640) feedWindow.hidden = false;
 
 function showToast(message) {
   toast.textContent = message;

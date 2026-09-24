@@ -600,12 +600,15 @@ body {
   .app-dock {
     top: auto;
     bottom: 49px;
-    left: 8px;
+    left: 4px;
+    width: calc(100% - 8px);
     flex-direction: row;
-    gap: 3px;
+    justify-content: space-between;
+    gap: 0;
+    overflow: hidden;
   }
   .desktop-icon {
-    width: 58px;
+    width: 52px;
     font-size: 6px;
   }
   .desktop-icon span {
@@ -620,7 +623,8 @@ body {
     top: 6%;
   }
   .pet-title h1 {
-    font-size: 44px;
+    font-size: 33px;
+    letter-spacing: -0.09em;
     text-shadow: 3px 3px var(--cream);
   }
   .sun {
@@ -644,8 +648,11 @@ body {
     height: 55%;
   }
   .pet-speech {
-    right: 14%;
+    right: 30%;
     font-size: 7px;
+  }
+  .forecast-widget {
+    display: none;
   }
   .pet-stats {
     left: 10px;
@@ -847,6 +854,16 @@ body {
   }
 }
 @media (max-width: 640px) {
+  .app-dock {
+    left: 4px;
+    width: calc(100% - 8px);
+    padding-right: 0;
+    overflow: hidden;
+  }
+  .desktop-icon {
+    width: 50px;
+    flex: 0 0 50px;
+  }
   .pet-button {
     bottom: 15%;
   }
@@ -1148,6 +1165,16 @@ body {
   min-height: 38px;
 }
 @media (max-width: 640px) {
+  .app-dock {
+    left: 4px;
+    width: calc(100% - 8px);
+    padding-right: 0;
+    overflow: hidden;
+  }
+  .desktop-icon {
+    width: 50px;
+    flex: 0 0 50px;
+  }
   .pet-button {
     width: 86%;
     height: 52%;
