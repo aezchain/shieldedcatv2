@@ -237,7 +237,7 @@ body {
 }
 .pet-speech {
   position: absolute;
-  right: -5%;
+  right: 14%;
   top: 7%;
   padding: 10px;
   border: var(--line);
@@ -282,6 +282,9 @@ body {
   transition: width 0.3s;
 }
 .pet-stats em {
+  display: block;
+  margin-top: 7px;
+  line-height: 1.2;
   font-style: normal;
   color: var(--purple);
 }
@@ -641,7 +644,7 @@ body {
     height: 55%;
   }
   .pet-speech {
-    right: 1%;
+    right: 14%;
     font-size: 7px;
   }
   .pet-stats {
